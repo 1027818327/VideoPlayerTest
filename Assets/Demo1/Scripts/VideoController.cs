@@ -26,14 +26,17 @@ public class VideoController : MonoBehaviour
 
     public Button button_Next;
 
-    public VideoClip[] videoClips;
-
-
+    private string[] videoPaths;
 
     // Use this for initialization
 
     void Start()
     {
+        videoPaths = new string[3];
+        videoPaths[0] = Application.streamingAssetsPath + "/video1.mp4";
+        videoPaths[1] = Application.streamingAssetsPath + "/video2.mp4";
+        videoPaths[2] = Application.streamingAssetsPath + "/video3.mp4";
+
 
         //获取VideoPlayer和RawImage组件，以及初始化当前视频索引
 
@@ -42,9 +45,11 @@ public class VideoController : MonoBehaviour
         rawImage = this.GetComponent<RawImage>();
 
         currentClipIndex = 0;
-
-        videoPlayer.clip = videoClips[currentClipIndex];
+        videoPlayer.source = VideoSource.Url;
+        videoPlayer.url = videoPaths[currentClipIndex];
         videoPlayer.audioOutputMode = VideoAudioOutputMode.AudioSource;
+        videoPlayer.controlledAudioTrackCount = 1;
+
         var tempAs = GetComponent<AudioSource>();
         videoPlayer.SetTargetAudioSource(0, tempAs);
 
@@ -57,6 +62,7 @@ public class VideoController : MonoBehaviour
         button_Next.onClick.AddListener(OnNextVideo);
 
         videoPlayer.prepareCompleted += PrepareCompleted;
+        videoPlayer.loopPointReached += VideoPlayEnd;
         videoPlayer.Prepare();
     }
 
@@ -65,6 +71,12 @@ public class VideoController : MonoBehaviour
         Debug.Log("Prepared");
         
         videoPlayer.Play();
+    }
+
+    private void VideoPlayEnd(VideoPlayer source)
+    {
+        Debug.Log("VideoPlayEnd");
+        OnNextVideo();
     }
 
     // Update is called once per frame
@@ -110,7 +122,7 @@ public class VideoController : MonoBehaviour
         else
         {
             
-            videoPlayer.Prepare();
+            videoPlayer.Play();
 
             text_PlayOrPause.text = "暂停";
 
@@ -134,11 +146,11 @@ public class VideoController : MonoBehaviour
         if (currentClipIndex < 0)
         {
 
-            currentClipIndex = videoClips.Length - 1;
+            currentClipIndex = videoPaths.Length - 1;
 
         }
 
-        videoPlayer.clip = videoClips[currentClipIndex];
+        videoPlayer.url = videoPaths[currentClipIndex];
 
         text_PlayOrPause.text = "暂停";
 
@@ -158,14 +170,12 @@ public class VideoController : MonoBehaviour
 
         currentClipIndex += 1;
 
-        currentClipIndex = currentClipIndex % videoClips.Length;
+        currentClipIndex = currentClipIndex % videoPaths.Length;
 
-        videoPlayer.clip = videoClips[currentClipIndex];
+        videoPlayer.url = videoPaths[currentClipIndex];
 
         text_PlayOrPause.text = "暂停";
 
-        var tempAs = GetComponent<AudioSource>();
-        tempAs.Stop();
         videoPlayer.Prepare();
     }
 
