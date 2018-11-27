@@ -1,9 +1,10 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 using UnityEngine.UI;
 
 using UnityEngine.Video;
+using System.IO;
+using System.Linq;
 
 public class VideoController : MonoBehaviour
 {
@@ -26,16 +27,24 @@ public class VideoController : MonoBehaviour
 
     public Button button_Next;
 
+    public Slider mSpeedSlider;
+
     private string[] videoPaths;
 
     // Use this for initialization
 
     void Start()
     {
+        
+        var tempEnumra = Directory.GetFiles(Application.streamingAssetsPath, "*.*", SearchOption.AllDirectories).Where(s => s.EndsWith(".mp4") || s.EndsWith(".mov") || s.EndsWith(".avi"));
+        videoPaths = tempEnumra.ToArray();
+
+        /*
         videoPaths = new string[3];
         videoPaths[0] = Application.streamingAssetsPath + "/video1.mp4";
         videoPaths[1] = Application.streamingAssetsPath + "/video2.mp4";
         videoPaths[2] = Application.streamingAssetsPath + "/video3.mp4";
+        */
 
 
         //获取VideoPlayer和RawImage组件，以及初始化当前视频索引
@@ -60,6 +69,8 @@ public class VideoController : MonoBehaviour
         button_Pre.onClick.AddListener(OnPreVideo);
 
         button_Next.onClick.AddListener(OnNextVideo);
+
+        mSpeedSlider.onValueChanged.AddListener(OnSpeedChanged);
 
         videoPlayer.prepareCompleted += PrepareCompleted;
         videoPlayer.loopPointReached += VideoPlayEnd;
@@ -154,7 +165,14 @@ public class VideoController : MonoBehaviour
 
         text_PlayOrPause.text = "暂停";
 
-        videoPlayer.Prepare();
+        if (!videoPlayer.isPrepared)
+        {
+            videoPlayer.Prepare();
+        }
+        else
+        {
+            videoPlayer.Play();
+        }
     }
 
     /// <summary>
@@ -176,7 +194,18 @@ public class VideoController : MonoBehaviour
 
         text_PlayOrPause.text = "暂停";
 
-        videoPlayer.Prepare();
+        if (!videoPlayer.isPrepared)
+        {
+            videoPlayer.Prepare();
+        }
+        else
+        {
+            videoPlayer.Play();
+        }
     }
 
+    private void OnSpeedChanged(float varValue)
+    {
+        videoPlayer.playbackSpeed = varValue;   
+    }
 }
