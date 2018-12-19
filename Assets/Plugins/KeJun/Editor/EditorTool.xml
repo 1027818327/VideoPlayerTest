@@ -1,0 +1,69 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EditorTool</name>
+    </assembly>
+    <members>
+        <member name="T:Framework.Unity.Editor.AutoBuilder">
+            <summary>
+            自动构建脚本
+            </summary>
+        </member>
+        <member name="T:Framework.Unity.Editor.FinishCompiling">
+            <summary>
+            编译脚本监听
+            </summary>
+        </member>
+        <member name="T:Framework.Unity.Editor.KeywordReplace">
+            <summary>
+            代码替换工具
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Editor.KeywordReplace.OnWillCreateAsset(System.String)">
+            <summary>
+            当在Unity编辑器创建资源时
+            </summary>
+            <param name="path"></param>
+        </member>
+        <member name="T:Framework.Unity.Editor.MeshEditor">
+            <summary>
+            网格工具类
+            </summary>
+        </member>
+        <member name="T:Framework.Unity.Editor.OpenFolder">
+            <summary>
+            打开文件夹相关的实用函数。
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Editor.OpenFolder.OpenFolderTemporaryCachePath">
+            <summary>
+            打开 Temporary Cache Path 文件夹。
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Editor.OpenFolder.OpenFolderPersistentDataPath">
+            <summary>
+            打开 Persistent Data Path 文件夹。
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Editor.OpenFolder.OpenFolderStreamingAssetsPath">
+            <summary>
+            打开 Streaming Assets Path 文件夹。
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Editor.OpenFolder.OpenFolderDataPath">
+            <summary>
+            打开 Data Path 文件夹。
+            </summary>
+        </member>
+        <member name="T:Framework.Unity.Editor.SqliteEditor">
+            <summary>
+            Sqlite编辑器工具
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Editor.SqliteEditor.CreateDataBaseBySql">
+            <summary>
+            恢复数据库通过sql语句
+            </summary>
+        </member>
+    </members>
+</doc>

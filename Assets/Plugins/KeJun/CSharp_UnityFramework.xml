@@ -1,0 +1,1707 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CSharp_UnityFramework</name>
+    </assembly>
+    <members>
+        <member name="T:Framework.Event.EventData">
+            <summary>
+            事件数据类
+            </summary>
+        </member>
+        <member name="T:Framework.Event.EventDataEx`1">
+            <summary>
+            事件数据类的扩展
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Framework.Event.EventDataEx`1.#ctor(`0)">
+            <summary>
+            构造方法
+            </summary>
+            <param name="varData"></param>
+        </member>
+        <member name="M:Framework.Event.EventDataEx`1.GetData">
+            <summary>
+            获取数据
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Event.OnNotificationDelegate">
+            <summary>
+            C#在类定义外可以声明方法的签名（Delegate，代理或委托），但是不能声明真正的方法。
+            </summary>
+            <param name="note"></param>
+        </member>
+        <member name="T:Framework.Event.EventManager">
+            <summary>
+            事件管理类
+            </summary>
+        </member>
+        <member name="M:Framework.Event.EventManager.AddEventListener(System.UInt32,Framework.Event.OnNotificationDelegate)">
+            <summary>
+            添加监听事件
+            </summary>
+            <param name="type"></param>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.RemoveEventListener(System.UInt32,Framework.Event.OnNotificationDelegate)">
+            <summary>
+            移除监听事件
+            </summary>
+            <param name="type"></param>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.RemoveEventListener(System.UInt32)">
+            <summary>
+            移除某一类型所有的监听事件
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.DispatchEvent(System.UInt32,Framework.Event.EventData)">
+            <summary>
+            派发事件有数据
+            </summary>
+            <param name="type"></param>
+            <param name="note"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.DispatchEvent(System.UInt32)">
+            <summary>
+            派发事件无数据
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.HasEventListener(System.UInt32)">
+            <summary>
+            查找是否有当前类型事件监听
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <!-- 对于成员“M:Framework.Event.EventManager.AddEventListener(System.String,Framework.Event.OnNotificationDelegate)”忽略有格式错误的 XML 注释 -->
+        <member name="M:Framework.Event.EventManager.RemoveEventListener(System.String,Framework.Event.OnNotificationDelegate)">
+            <summary>
+            移除监听事件
+            </summary>
+            <param name="type"></param>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.RemoveEventListener(System.String)">
+            <summary>
+            移除某一类型所有的监听事件
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.DispatchEvent(System.String,Framework.Event.EventData)">
+            <summary>
+            派发事件有数据
+            </summary>
+            <param name="type"></param>
+            <param name="note"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.DispatchEvent(System.String)">
+            <summary>
+            派发事件无数据
+            </summary>
+            <param name="type"></param>
+        </member>
+        <member name="M:Framework.Event.EventManager.HasEventListener(System.String)">
+            <summary>
+            查找是否有当前类型事件监听
+            </summary>
+            <param name="type"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Event.LogicEventType">
+            <summary>
+            公共逻辑事件类型类
+            </summary>
+        </member>
+        <member name="F:Framework.Event.LogicEventType.AppStart">
+            <summary>
+            // App开始
+            </summary>
+        </member>
+        <member name="F:Framework.Event.LogicEventType.SwitchAppState">
+            <summary>
+            切换App状态完成
+            </summary>
+        </member>
+        <member name="F:Framework.Event.LogicEventType.UnTouchItem">
+            <summary>
+            离开触摸道具
+            </summary>
+        </member>
+        <member name="F:Framework.Event.LogicEventType.FrameworkEventEnd">
+            <summary>
+            框架部分事件结束
+            </summary>
+        </member>
+        <member name="M:Framework.IO.CustomFile.GetFileHash(System.String)">
+            <summary>
+            计算文件的hash值 用于比较两个文件是否相同
+            </summary>
+            <param name="filePath">文件路径</param>
+            <returns>文件hash值</returns>
+        </member>
+        <member name="M:Framework.IO.CustomFile.GetBytesHash(System.Byte[])">
+            <summary>
+            计算文件的hash值 用于比较两个文件是否相同
+            </summary>
+            <param name="varArray">文件字节数组</param>
+            <returns>文件hash值</returns>
+        </member>
+        <member name="T:Framework.Pattern.Singleton`1">
+            <summary>
+            C#单例模式
+            </summary>
+        </member>
+        <member name="P:Framework.Pattern.Singleton`1.Instance">
+            <summary>
+            单例属性
+            </summary>
+        </member>
+        <member name="M:Framework.Pattern.Singleton`1.#ctor">
+            <summary>
+            构造方法
+            </summary>
+        </member>
+        <member name="M:Framework.Pattern.Singleton`1.Init">
+            <summary>
+            初始化方法
+            </summary>
+        </member>
+        <member name="T:Framework.Pattern.Singleton">
+            <summary>
+            扩展单例
+            </summary>
+        </member>
+        <member name="M:Framework.Pattern.Singleton.GetInstance``1">
+            <summary>
+            获取单例方法
+            </summary>
+            <typeparam name="T"></typeparam>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Pattern.State">
+            <summary>
+            抽象状态类
+            </summary>
+        </member>
+        <member name="T:Framework.Pattern.State.StateCode">
+            <summary>
+            状态码
+            </summary>
+        </member>
+        <member name="F:Framework.Pattern.State.StateCode.None">
+            <summary>
+            None
+            </summary>
+        </member>
+        <member name="F:Framework.Pattern.State.StateCode.Begin">
+            <summary>
+            状态开始
+            </summary>
+        </member>
+        <member name="F:Framework.Pattern.State.StateCode.End">
+            <summary>
+            状态结束
+            </summary>
+        </member>
+        <member name="P:Framework.Pattern.State.pStateCode">
+            <summary>
+            状态码属性
+            </summary>
+        </member>
+        <member name="M:Framework.Pattern.State.Restart">
+            <summary>
+            重新开始
+            </summary>
+        </member>
+        <member name="M:Framework.Pattern.State.Enter">
+            <summary>
+            进入
+            </summary>
+        </member>
+        <member name="M:Framework.Pattern.State.Leave">
+            <summary>
+            离开
+            </summary>
+        </member>
+        <member name="T:Framework.Pattern.StateManager">
+            <summary>
+            状态管理类
+            </summary>
+        </member>
+        <member name="P:Framework.Pattern.StateManager.CurrentState">
+            <summary>
+            当前状态属性
+            </summary>
+        </member>
+        <member name="M:Framework.Pattern.StateManager.EnterState``1">
+            <summary>
+            切换状态
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:Framework.Pattern.StateManager.RestartState">
+            <summary>
+            重启当前状态
+            </summary>
+        </member>
+        <member name="T:Framework.Security.DES">
+            <summary>
+            DES加密类
+            </summary>
+        </member>
+        <member name="P:Framework.Security.DES.Iv">
+            <summary>
+            DES加密偏移量，必须是>=8位长的字符串
+            </summary>
+        </member>
+        <member name="P:Framework.Security.DES.Key">
+            <summary>
+            DES加密的私钥，必须是8位长的字符串
+            </summary>
+        </member>
+        <member name="M:Framework.Security.DES.DESEncrypt(System.String)">
+            <summary>
+            对字符串进行DES加密
+            </summary>
+            <param name="sourceString">待加密的字符串</param>
+            <returns>加密后的BASE64编码的字符串</returns>
+        </member>
+        <member name="M:Framework.Security.DES.DESDecrypt(System.String)">
+            <summary>
+            对DES加密后的字符串进行解密
+            </summary>
+            <param name="encryptedString">待解密的字符串</param>
+            <returns>解密后的字符串</returns>
+        </member>
+        <member name="T:Framework.Security.MD5">
+            <summary>
+            MD5加密不可逆，不需要加密向量
+            </summary>
+        </member>
+        <member name="M:Framework.Security.MD5.MD5Encrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="normalTxt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Security.RSA">
+            <summary>
+            RSA加密类
+            </summary>
+        </member>
+        <member name="M:Framework.Security.RSA.RSAEncrypt(System.String)">
+            <summary>
+            加密
+            </summary>
+            <param name="normaltxt"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Security.RSA.RSADecrypt(System.String)">
+            <summary>
+            解密
+            </summary>
+            <param name="securityTxt"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Serialize.SerializeHelper">
+            <summary>
+            C#序列化帮助类
+            </summary>
+        </member>
+        <member name="M:Framework.Serialize.SerializeHelper.ConvertToString(System.Byte[])">
+            <summary>
+            使用UTF8编码将byte数组转成字符串
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Serialize.SerializeHelper.ConvertToString(System.Byte[],System.Text.Encoding)">
+            <summary>
+            使用指定字符编码将byte数组转成字符串
+            </summary>
+            <param name="data"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Serialize.SerializeHelper.ConvertToByte(System.String)">
+            <summary>
+            使用UTF8编码将字符串转成byte数组
+            </summary>
+            <param name="str"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Serialize.SerializeHelper.ConvertToByte(System.String,System.Text.Encoding)">
+            <summary>
+            使用指定字符编码将字符串转成byte数组
+            </summary>
+            <param name="str"></param>
+            <param name="encoding"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Serialize.SerializeHelper.SerializeToBinary(System.Object)">
+            <summary>
+            将对象序列化为二进制数据 
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Serialize.SerializeHelper.DeserializeWithBinary(System.Byte[])">
+            <summary>
+            将二进制数据反序列化
+            </summary>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Serialize.SerializeHelper.DeserializeWithBinary``1(System.Byte[])">
+            <summary>
+            将二进制数据反序列化为指定类型对象
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="data"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Unity.Pattern.SingletonMono`1">
+            <summary>
+            MonoBehaviour单例模式
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Pattern.SingletonMono`1.OnDestroy">
+            <summary>  
+            When Unity quits, it destroys objects in a random order.  
+            In principle, a Singleton is only destroyed when application quits.  
+            If any script calls Instance after it have been destroyed,  
+              it will create a buggy ghost object that will stay on the Editor scene  
+              even after stopping playing the Application. Really bad!  
+            So, this was made to be sure we're not creating that buggy ghost object.  
+            </summary>  
+        </member>
+        <member name="T:Framework.Unity.ResourcesMgr">
+            <summary>
+            资源加载管理类
+            </summary>
+        </member>
+        <member name="F:Framework.Unity.ResourcesMgr.hashtable">
+            <summary>
+            资源缓存集合
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.ResourcesMgr.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.ResourcesMgr.Load``1(System.String,System.Boolean)">
+            <summary>
+            从Res中加载资源
+            </summary>
+            <typeparam name="T"></typeparam>
+            <param name="path"></param>
+            <param name="cache"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Unity.ResourcesMgr.CreateGameObject(System.String,System.Boolean)">
+            <summary>
+            从Res中创建一个GameObject对象
+            </summary>
+            <param name="path">路径</param>
+            <param name="cache">是否缓存</param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Unity.ResourcesMgr.Release">
+            <summary>
+            释放缓存
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.audioID">
+            <summary>
+            The ID of the Audio
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.audioSource">
+            <summary>
+            The audio source that is responsible for this audio
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.clip">
+            <summary>
+            Audio clip to play/is playing
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.loop">
+            <summary>
+            Whether the audio will be lopped
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.persist">
+            <summary>
+            Whether the audio persists in between scene changes
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.fadeInSeconds">
+            <summary>
+            How many seconds it needs for the audio to fade in/ reach target volume (if higher than current)
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.fadeOutSeconds">
+            <summary>
+            How many seconds it needs for the audio to fade out/ reach target volume (if lower than current)
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.playing">
+            <summary>
+            Whether the audio is currently playing
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.paused">
+            <summary>
+            Whether the audio is paused
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.stopping">
+            <summary>
+            Whether the audio is stopping
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.Audio.activated">
+            <summary>
+            Whether the audio is created and updated at least once. 
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Play">
+            <summary>
+            Start playing audio clip from the beggining
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Play(System.Single)">
+            <summary>
+            Start playing audio clip from the beggining
+            </summary>
+            <param name="volume">The target volume</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Stop">
+            <summary>
+            Stop playing audio clip
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Pause">
+            <summary>
+            Pause playing audio clip
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.UnPause">
+            <summary>
+            Resume playing audio clip
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Resume">
+            <summary>
+            Resume playing audio clip
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.SetVolume(System.Single)">
+            <summary>
+            Sets the audio volume
+            </summary>
+            <param name="volume">The target volume</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.SetVolume(System.Single,System.Single)">
+            <summary>
+            Sets the audio volume
+            </summary>
+            <param name="volume">The target volume</param>
+            <param name="fadeSeconds">How many seconds it needs for the audio to fade in/out to reach target volume. If passed, it will override the Audio's fade in/out seconds, but only for this transition</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.SetVolume(System.Single,System.Single,System.Single)">
+            <summary>
+            Sets the audio volume
+            </summary>
+            <param name="volume">The target volume</param>
+            <param name="fadeSeconds">How many seconds it needs for the audio to fade in/out to reach target volume. If passed, it will override the Audio's fade in/out seconds, but only for this transition</param>
+            <param name="startVolume">Immediately set the volume to this value before beginning the fade. If not passed, the Audio will start fading from the current volume towards the target volume</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Set3DMaxDistance(System.Single)">
+            <summary>
+            Sets the Audio 3D max distance
+            </summary>
+            <param name="max">the max distance</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Set3DMinDistance(System.Single)">
+            <summary>
+            Sets the Audio 3D min distance
+            </summary>
+            <param name="max">the min distance</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.Audio.Set3DDistances(System.Single,System.Single)">
+            <summary>
+            Sets the Audio 3D distances
+            </summary>
+            <param name="min">the min distance</param>
+            <param name="max">the max distance</param>
+        </member>
+        <member name="P:Framework.Unity.Sound.SoundManager.ignoreDuplicateMusic">
+            <summary>
+            When set to true, new Audios that have the same audio clip as any other Audio, will be ignored
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.SoundManager.ignoreDuplicateSounds">
+            <summary>
+            When set to true, new Audios that have the same audio clip as any other Audio, will be ignored
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.SoundManager.ignoreDuplicateUISounds">
+            <summary>
+            When set to true, new Audios that have the same audio clip as any other Audio, will be ignored
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.SoundManager.globalVolume">
+            <summary>
+            Global volume
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.SoundManager.globalMusicVolume">
+            <summary>
+            Global music volume
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.SoundManager.globalSoundsVolume">
+            <summary>
+            Global sounds volume
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Sound.SoundManager.globalUISoundsVolume">
+            <summary>
+            Global UI sounds volume
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetAudio(System.Int32)">
+            <summary>
+            Returns the Audio that has as its id the audioID if one is found, returns null if no such Audio is found
+            </summary>
+            <param name="audioID">The id of the Audio to be retrieved</param>
+            <returns>Audio that has as its id the audioID, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetAudio(UnityEngine.AudioClip)">
+            <summary>
+            Returns the first occurrence of Audio that plays the given audioClip. Returns null if no such Audio is found
+            </summary>
+            <param name="audioClip">The audio clip of the Audio to be retrieved</param>
+            <returns>First occurrence of Audio that has as plays the audioClip, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetMusicAudio(System.Int32)">
+            <summary>
+            Returns the music Audio that has as its id the audioID if one is found, returns null if no such Audio is found
+            </summary>
+            <param name="audioID">The id of the music Audio to be returned</param>
+            <returns>Music Audio that has as its id the audioID if one is found, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetMusicAudio(UnityEngine.AudioClip)">
+            <summary>
+            Returns the first occurrence of music Audio that plays the given audioClip. Returns null if no such Audio is found
+            </summary>
+            <param name="audioClip">The audio clip of the music Audio to be retrieved</param>
+            <returns>First occurrence of music Audio that has as plays the audioClip, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetSoundAudio(System.Int32)">
+            <summary>
+            Returns the sound fx Audio that has as its id the audioID if one is found, returns null if no such Audio is found
+            </summary>
+            <param name="audioID">The id of the sound fx Audio to be returned</param>
+            <returns>Sound fx Audio that has as its id the audioID if one is found, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetSoundAudio(UnityEngine.AudioClip)">
+            <summary>
+            Returns the first occurrence of sound Audio that plays the given audioClip. Returns null if no such Audio is found
+            </summary>
+            <param name="audioClip">The audio clip of the sound Audio to be retrieved</param>
+            <returns>First occurrence of sound Audio that has as plays the audioClip, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetUISoundAudio(System.Int32)">
+            <summary>
+            Returns the UI sound fx Audio that has as its id the audioID if one is found, returns null if no such Audio is found
+            </summary>
+            <param name="audioID">The id of the UI sound fx Audio to be returned</param>
+            <returns>UI sound fx Audio that has as its id the audioID if one is found, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.GetUISoundAudio(UnityEngine.AudioClip)">
+            <summary>
+            Returns the first occurrence of UI sound Audio that plays the given audioClip. Returns null if no such Audio is found
+            </summary>
+            <param name="audioClip">The audio clip of the UI sound Audio to be retrieved</param>
+            <returns>First occurrence of UI sound Audio that has as plays the audioClip, null if no such Audio is found</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlayMusic(UnityEngine.AudioClip)">
+            <summary>
+            Play background music
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlayMusic(UnityEngine.AudioClip,System.Single)">
+            <summary>
+            Play background music
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="volume"> The volume the music will have</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlayMusic(UnityEngine.AudioClip,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Play background music
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="volume"> The volume the music will have</param>
+            <param name="loop">Wether the music is looped</param>
+            <param name = "persist" > Whether the audio persists in between scene changes</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlayMusic(UnityEngine.AudioClip,System.Single,System.Boolean,System.Boolean,System.Single,System.Single)">
+            <summary>
+            Play background music
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="volume"> The volume the music will have</param>
+            <param name="loop">Wether the music is looped</param>
+            <param name="persist"> Whether the audio persists in between scene changes</param>
+            <param name="fadeInValue">How many seconds it needs for the audio to fade in/ reach target volume (if higher than current)</param>
+            <param name="fadeOutValue"> How many seconds it needs for the audio to fade out/ reach target volume (if lower than current)</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlayMusic(UnityEngine.AudioClip,System.Single,System.Boolean,System.Boolean,System.Single,System.Single,System.Single,UnityEngine.Transform)">
+            <summary>
+            Play background music
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="volume"> The volume the music will have</param>
+            <param name="loop">Wether the music is looped</param>
+            <param name="persist"> Whether the audio persists in between scene changes</param>
+            <param name="fadeInValue">How many seconds it needs for the audio to fade in/ reach target volume (if higher than current)</param>
+            <param name="fadeOutValue"> How many seconds it needs for the audio to fade out/ reach target volume (if lower than current)</param>
+            <param name="currentMusicfadeOutSeconds"> How many seconds it needs for current music audio to fade out. It will override its own fade out seconds. If -1 is passed, current music will keep its own fade out seconds</param>
+            <param name="sourceTransform">The transform that is the source of the music (will become 3D audio). If 3D audio is not wanted, use null</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlaySound(UnityEngine.AudioClip)">
+            <summary>
+            Play a sound fx
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlaySound(UnityEngine.AudioClip,System.Single)">
+            <summary>
+            Play a sound fx
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="volume"> The volume the music will have</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlaySound(UnityEngine.AudioClip,System.Boolean)">
+            <summary>
+            Play a sound fx
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="loop">Wether the sound is looped</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlaySound(UnityEngine.AudioClip,System.Single,System.Boolean,UnityEngine.Transform)">
+            <summary>
+            Play a sound fx
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="volume"> The volume the music will have</param>
+            <param name="loop">Wether the sound is looped</param>
+            <param name="sourceTransform">The transform that is the source of the sound (will become 3D audio). If 3D audio is not wanted, use null</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlayUISound(UnityEngine.AudioClip)">
+            <summary>
+            Play a UI sound fx
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PlayUISound(UnityEngine.AudioClip,System.Single)">
+            <summary>
+            Play a UI sound fx
+            </summary>
+            <param name="clip">The audio clip to play</param>
+            <param name="volume"> The volume the music will have</param>
+            <returns>The ID of the created Audio object</returns>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.StopAll">
+            <summary>
+            Stop all audio playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.StopAll(System.Single)">
+            <summary>
+            Stop all audio playing
+            </summary>
+            <param name="fadeOutSeconds"> How many seconds it needs for all music audio to fade out. It will override  their own fade out seconds. If -1 is passed, all music will keep their own fade out seconds</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.StopAllMusic">
+            <summary>
+            Stop all music playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.StopAllMusic(System.Single)">
+            <summary>
+            Stop all music playing
+            </summary>
+            <param name="fadeOutSeconds"> How many seconds it needs for all music audio to fade out. It will override  their own fade out seconds. If -1 is passed, all music will keep their own fade out seconds</param>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.StopAllSounds">
+            <summary>
+            Stop all sound fx playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.StopAllUISounds">
+            <summary>
+            Stop all UI sound fx playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PauseAll">
+            <summary>
+            Pause all audio playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PauseAllMusic">
+            <summary>
+            Pause all music playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PauseAllSounds">
+            <summary>
+            Pause all sound fx playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.PauseAllUISounds">
+            <summary>
+            Pause all UI sound fx playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.ResumeAll">
+            <summary>
+            Resume all audio playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.ResumeAllMusic">
+            <summary>
+            Resume all music playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.ResumeAllSounds">
+            <summary>
+            Resume all sound fx playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Sound.SoundManager.ResumeAllUISounds">
+            <summary>
+            Resume all UI sound fx playing
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Tools.CameraExtension.IsVisibleOn3dCamera(UnityEngine.GameObject,UnityEngine.Camera)">
+            <summary>
+            判断世界坐标系内的物体,摄像机是否可见
+            </summary>
+            <param name="obj"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.CameraExtension.IsVisibleOn3dCamera(UnityEngine.Vector3,UnityEngine.Camera)">
+             <summary>
+            判断世界坐标系内的一个点,摄像机是否可见
+             </summary>
+             <param name="obj"></param>
+             <returns></returns>
+        </member>
+        <member name="T:Framework.Unity.Tools.MonoUpdaterEvent">
+            <summary>
+            委托
+            </summary>
+        </member>
+        <member name="T:Framework.Unity.Tools.MonoHelper">
+            <summary>
+            Mono帮助类
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Tools.MonoHelper.AddUpdateListener(Framework.Unity.Tools.MonoUpdaterEvent)">
+            <summary>
+            添加Update监听
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.MonoHelper.RemoveUpdateListener(Framework.Unity.Tools.MonoUpdaterEvent)">
+            <summary>
+            移除Update监听
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.MonoHelper.AddLateUpdateListener(Framework.Unity.Tools.MonoUpdaterEvent)">
+            <summary>
+            添加LateUpdate监听
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.MonoHelper.RemoveLateUpdateListener(Framework.Unity.Tools.MonoUpdaterEvent)">
+            <summary>
+            移除LateUpdate监听
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.MonoHelper.AddFixedUpdateListener(Framework.Unity.Tools.MonoUpdaterEvent)">
+            <summary>
+            添加FixedUpdate监听
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.MonoHelper.RemoveFixedUpdateListener(Framework.Unity.Tools.MonoUpdaterEvent)">
+            <summary>
+            移除FixedUpdate监听
+            </summary>
+            <param name="listener"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.SceneListener.RegistSceneLoadedAction(System.Action{System.String})">
+            <summary>
+            添加加载完场景回调
+            </summary>
+            <param name="varAction"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.SceneListener.UnRegistSceneLoadedAction(System.Action{System.String})">
+            <summary>
+            移除加载完场景回调
+            </summary>
+            <param name="varAction"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.SceneListener.LoadScene(System.String,UnityEngine.SceneManagement.LoadSceneMode,System.Action)">
+            <summary>
+            同步加载场景
+            </summary>
+            <param name="varSceneName">场景名字</param>
+            <param name="varMode">加载模式</param>
+            <param name="onLoadComplete">加载回调</param>
+        </member>
+        <member name="M:Framework.Unity.Tools.SceneListener.LoadSceneAsync(System.String,UnityEngine.SceneManagement.LoadSceneMode,System.Action)">
+            <summary>
+            异步加载场景
+            </summary>
+            <param name="varSceneName">场景名字</param>
+            <param name="varMode">加载模式</param>
+            <param name="onLoadComplete">加载回调</param>
+        </member>
+        <member name="T:Framework.Unity.Tools.Teleport">
+            <summary>
+            传送门, 只暴露事件
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Tools.DelayInvoker.RemoveInvoke(System.Object)">
+            <summary>
+            移除定时回调
+            </summary>
+            <param name="group"></param>
+        </member>
+        <member name="T:Framework.Unity.Tools.TimeTaskDelegate">
+            <summary>
+            定时委托
+            </summary>
+        </member>
+        <member name="T:Framework.Unity.Tools.TimeManager">
+            <summary>  
+            定时任务管理器  
+            </summary>  
+        </member>
+        <member name="M:Framework.Unity.Tools.TimeManager.Init">
+            <summary>
+            初始化
+            </summary>
+        </member>
+        <member name="F:Framework.Unity.Tools.TimeManager.taskList">
+            <summary>  
+            定时任务列表  
+            </summary>  
+        </member>
+        <member name="M:Framework.Unity.Tools.TimeManager.AddTask(System.Single,System.Boolean,Framework.Unity.Tools.TimeTaskDelegate)">
+            <summary>  
+            添加定时任务  
+            </summary>  
+            <param name="timeDelay">延时执行时间间隔</param>  
+            <param name="repeat">是否可以重复执行</param>  
+            <param name="timeTaskCallback">执行回调</param>  
+        </member>
+        <member name="M:Framework.Unity.Tools.TimeManager.AddTask(Framework.Unity.Tools.TimeTask)">
+            <summary>
+            添加定时任务
+            </summary>
+            <param name="taskToAdd"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.TimeManager.RemoveTask(Framework.Unity.Tools.TimeTaskDelegate)">
+            <summary>  
+            移除定时任务  
+            </summary>  
+            <param name="taskToRemove"></param>  
+            <returns></returns>  
+        </member>
+        <member name="M:Framework.Unity.Tools.TimeManager.Tick">
+            <summary>  
+            执行定时任务  
+            </summary>  
+        </member>
+        <member name="T:Framework.Unity.Tools.TimeTask">
+            <summary>  
+            定时任务封装类  
+            </summary>  
+        </member>
+        <member name="F:Framework.Unity.Tools.TimeTask._timeDelay">
+            <summary>  
+            延迟时间  
+            </summary>  
+        </member>
+        <member name="F:Framework.Unity.Tools.TimeTask._timeDelayOnly">
+            <summary>  
+            延迟时间  
+            </summary>  
+        </member>
+        <member name="F:Framework.Unity.Tools.TimeTask._repeat">
+            <summary>  
+            是否需要重复执行  
+            </summary>  
+        </member>
+        <member name="F:Framework.Unity.Tools.TimeTask._timeTaskCallBack">
+            <summary>  
+            回调函数  
+            </summary>  
+        </member>
+        <member name="P:Framework.Unity.Tools.TimeTask.timeDelay">
+            <summary>
+            延迟时间属性
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Tools.TimeTask.timeDelayOnly">
+            <summary>
+            延迟时间属性
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Tools.TimeTask.repeat">
+            <summary>
+            是否需要重复执行属性
+            </summary>
+        </member>
+        <member name="P:Framework.Unity.Tools.TimeTask.timeTaskCallBack">
+            <summary>
+            回调函数属性
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Tools.TimeTask.#ctor(System.Single,System.Boolean,Framework.Unity.Tools.TimeTaskDelegate)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="timeDelay"></param>
+            <param name="repeat"></param>
+            <param name="timeTaskCallBack"></param>
+        </member>
+        <member name="M:Framework.Unity.Tools.TimeTask.#ctor(System.Single,Framework.Unity.Tools.TimeTaskDelegate)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="timeDelay"></param>
+            <param name="timeTaskCallBack"></param>
+        </member>
+        <member name="T:Framework.Unity.Tools.ImageUtils">
+            <summary>
+            Various functions and utilities to work with images, textures or sprites.
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Tools.ImageUtils.LoadTexture(System.String)">
+            <summary>
+            Load an image from disk into a Texture2D
+            </summary>
+            <param name="path">The full path to the image file</param>
+            <returns>Texture2D</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.ImageUtils.LoadSprite(System.String)">
+            <summary>
+            Load an image from disk into a Sprite
+            </summary>
+            <param name="path">The full path to the image file</param>
+            <returns>Sprite</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.ImageUtils.GenerateSolidTexture(System.Int32,System.Int32,UnityEngine.Color)">
+            <summary>
+            Genenrates a solid texture of a specific color and size
+            </summary>
+            <param name="width">The width of the generated texture</param>
+            <param name="height">The height of the generated texture</param>
+            <param name="color">The color of the generated texture</param>
+            <returns>A solid texture2D</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.ImageUtils.GenerateSolidSprite(System.Int32,System.Int32,UnityEngine.Color)">
+            <summary>
+            Genenrates a solid sprite of a specific color and size
+            </summary>
+            <param name="width">The width of the generated sprite</param>
+            <param name="height">The height of the generated sprite</param>
+            <param name="color">The color of the generated sprite</param>
+            <returns>A solid Sprite</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.ImageUtils.TextureToSprite(UnityEngine.Texture2D)">
+            <summary>
+            Converts a Texture2D into a Sprite
+            </summary>
+            <param name="texture">The texture to be converted</param>
+            <returns>A sprite</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.ImageUtils.SpriteToTexture(UnityEngine.Sprite)">
+            <summary>
+            Converts a Sprite into a Texture2d
+            </summary>
+            <param name="sprite">The sprite to be converted</param>
+            <returns></returns>
+        </member>
+        <member name="T:Framework.Unity.Tools.MeshUtils">
+            <summary>
+            Various functions and utilities to work with meshes, mesh renderers and mesh filters.
+            </summary>
+        </member>
+        <member name="M:Framework.Unity.Tools.MeshUtils.GetSharedMaterialsList(UnityEngine.Transform)">
+            <summary>
+            Returns a list of all the shared materials used by the transform and its children
+            </summary>
+            <param name="transform"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.MeshUtils.GetSharedMaterialsList(UnityEngine.Transform,System.Boolean)">
+            <summary>
+            Returns a list of all the shared materials used by the transform and its children
+            </summary>
+            <param name="transform">The transform to be searched</param>
+            <param name="includeInactive">Whether to include inactiver gameobjects in the search</param>
+            <returns>A list of materials</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.MeshUtils.GetMaterialsList(UnityEngine.Transform)">
+            <summary>
+            Returns a list of all the materials used by the transform and its children
+            </summary>
+            <param name="transform"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.MeshUtils.GetMaterialsList(UnityEngine.Transform,System.Boolean)">
+            <summary>
+            Returns a list of all the materials used by the transform and its children
+            </summary>
+            <param name="transform">The transform to be searched</param>
+            <param name="includeInactive">Whether to include inactiver gameobjects in the search</param>
+            <returns>A list of materials</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.StringUtils.GenerateUniqueString">
+            <summary>
+            Generates a unique string
+            </summary>
+            <returns>A unique alphanumeric string</returns>
+        </member>
+        <member name="M:Framework.Unity.Tools.StringUtils.IsUnique(System.String,System.String[])">
+            <summary>
+            Checks if a string is unique among a list of other strings
+            </summary>
+            <param name="str">The string to be checked for uniqueness</param>
+            <param name="otherStrings">An array of strings to check the provided str against</param>
+            <returns>True if it is unique, false if it is not</returns>
+        </member>
+        <member name="T:Framework.Runtime.DebuggerActiveWindowType">
+            <summary>
+            调试器激活窗口类型。
+            </summary>
+        </member>
+        <member name="F:Framework.Runtime.DebuggerActiveWindowType.Auto">
+            <summary>
+            自动（发布版本状态关闭，开发版本状态打开）。
+            </summary>
+        </member>
+        <member name="F:Framework.Runtime.DebuggerActiveWindowType.Close">
+            <summary>
+            关闭。
+            </summary>
+        </member>
+        <member name="F:Framework.Runtime.DebuggerActiveWindowType.Open">
+            <summary>
+            打开。
+            </summary>
+        </member>
+        <member name="T:Framework.Runtime.DebuggerComponent">
+            <summary>
+            调试组件。
+            </summary>
+        </member>
+        <member name="F:Framework.Runtime.DebuggerComponent.DefaultIconRect">
+            <summary>
+            默认调试器漂浮框大小。
+            </summary>
+        </member>
+        <member name="F:Framework.Runtime.DebuggerComponent.DefaultWindowRect">
+            <summary>
+            默认调试器窗口大小。
+            </summary>
+        </member>
+        <member name="F:Framework.Runtime.DebuggerComponent.DefaultWindowScale">
+            <summary>
+            默认调试器窗口缩放比例。
+            </summary>
+        </member>
+        <member name="P:Framework.Runtime.DebuggerComponent.ActiveWindow">
+            <summary>
+            获取或设置调试窗口是否激活。
+            </summary>
+        </member>
+        <member name="P:Framework.Runtime.DebuggerComponent.ShowFullWindow">
+            <summary>
+            获取或设置是否显示完整调试器界面。
+            </summary>
+        </member>
+        <member name="P:Framework.Runtime.DebuggerComponent.IconRect">
+            <summary>
+            获取或设置调试器漂浮框大小。
+            </summary>
+        </member>
+        <member name="P:Framework.Runtime.DebuggerComponent.WindowRect">
+            <summary>
+            获取或设置调试器窗口大小。
+            </summary>
+        </member>
+        <member name="P:Framework.Runtime.DebuggerComponent.WindowScale">
+            <summary>
+            获取或设置调试器窗口缩放比例。
+            </summary>
+        </member>
+        <member name="M:Framework.Runtime.DebuggerComponent.Awake">
+            <summary>
+            游戏框架组件初始化。
+            </summary>
+        </member>
+        <member name="M:Framework.Runtime.DebuggerComponent.RegisterDebuggerWindow(System.String,Framework.Debugger.IDebuggerWindow,System.Object[])">
+            <summary>
+            注册调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <param name="debuggerWindow">要注册的调试窗口。</param>
+            <param name="args">初始化调试窗口参数。</param>
+        </member>
+        <member name="M:Framework.Runtime.DebuggerComponent.GetDebuggerWindow(System.String)">
+            <summary>
+            获取调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <returns>要获取的调试窗口。</returns>
+        </member>
+        <member name="T:Framework.Debugger.DebuggerManager">
+            <summary>
+            调试管理器。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.#ctor">
+            <summary>
+            初始化调试管理器的新实例。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.DebuggerManager.ActiveWindow">
+            <summary>
+            获取或设置调试窗口是否激活。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.DebuggerManager.DebuggerWindowRoot">
+            <summary>
+            调试窗口根节点。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.Update(System.Single,System.Single)">
+            <summary>
+            调试管理器轮询。
+            </summary>
+            <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
+            <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.Shutdown">
+            <summary>
+            关闭并清理调试管理器。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.RegisterDebuggerWindow(System.String,Framework.Debugger.IDebuggerWindow,System.Object[])">
+            <summary>
+            注册调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <param name="debuggerWindow">要注册的调试窗口。</param>
+            <param name="args">初始化调试窗口参数。</param>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.GetDebuggerWindow(System.String)">
+            <summary>
+            获取调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <returns>要获取的调试窗口。</returns>
+        </member>
+        <member name="T:Framework.Debugger.DebuggerManager.DebuggerWindowGroup">
+            <summary>
+            调试窗口组。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.DebuggerWindowCount">
+            <summary>
+            获取调试窗口数量。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.SelectedIndex">
+            <summary>
+            获取或设置当前选中的调试窗口索引。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.SelectedWindow">
+            <summary>
+            获取当前选中的调试窗口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.Initialize(System.Object[])">
+            <summary>
+            初始化调试组。
+            </summary>
+            <param name="args">初始化调试组参数。</param>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.Shutdown">
+            <summary>
+            关闭调试组。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.OnEnter">
+            <summary>
+            进入调试窗口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.OnLeave">
+            <summary>
+            离开调试窗口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.OnUpdate(System.Single,System.Single)">
+            <summary>
+            调试组轮询。
+            </summary>
+            <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
+            <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.OnDraw">
+            <summary>
+            调试窗口绘制。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.GetDebuggerWindowNames">
+            <summary>
+            获取调试组的调试窗口名称集合。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.GetDebuggerWindow(System.String)">
+            <summary>
+            获取调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <returns>要获取的调试窗口。</returns>
+        </member>
+        <member name="M:Framework.Debugger.DebuggerManager.DebuggerWindowGroup.RegisterDebuggerWindow(System.String,Framework.Debugger.IDebuggerWindow)">
+            <summary>
+            注册调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <param name="debuggerWindow">要注册的调试窗口。</param>
+        </member>
+        <member name="T:Framework.Debugger.IDebuggerManager">
+            <summary>
+            调试管理器接口。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.IDebuggerManager.ActiveWindow">
+            <summary>
+            获取或设置调试窗口是否激活。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.IDebuggerManager.DebuggerWindowRoot">
+            <summary>
+            调试窗口根节点。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerManager.RegisterDebuggerWindow(System.String,Framework.Debugger.IDebuggerWindow,System.Object[])">
+            <summary>
+            注册调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <param name="debuggerWindow">要注册的调试窗口。</param>
+            <param name="args">初始化调试窗口参数。</param>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerManager.GetDebuggerWindow(System.String)">
+            <summary>
+            获取调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <returns>要获取的调试窗口。</returns>
+        </member>
+        <member name="T:Framework.Debugger.IDebuggerWindow">
+            <summary>
+            调试窗口接口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindow.Initialize(System.Object[])">
+            <summary>
+            初始化调试窗口。
+            </summary>
+            <param name="args">初始化调试窗口参数。</param>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindow.Shutdown">
+            <summary>
+            关闭调试窗口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindow.OnEnter">
+            <summary>
+            进入调试窗口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindow.OnLeave">
+            <summary>
+            离开调试窗口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindow.OnUpdate(System.Single,System.Single)">
+            <summary>
+            调试窗口轮询。
+            </summary>
+            <param name="elapseSeconds">逻辑流逝时间，以秒为单位。</param>
+            <param name="realElapseSeconds">真实流逝时间，以秒为单位。</param>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindow.OnDraw">
+            <summary>
+            调试窗口绘制。
+            </summary>
+        </member>
+        <member name="T:Framework.Debugger.IDebuggerWindowGroup">
+            <summary>
+            调试窗口组接口。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.IDebuggerWindowGroup.DebuggerWindowCount">
+            <summary>
+            获取调试窗口数量。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.IDebuggerWindowGroup.SelectedIndex">
+            <summary>
+            获取或设置当前选中的调试窗口索引。
+            </summary>
+        </member>
+        <member name="P:Framework.Debugger.IDebuggerWindowGroup.SelectedWindow">
+            <summary>
+            获取当前选中的调试窗口。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindowGroup.GetDebuggerWindowNames">
+            <summary>
+            获取调试组的调试窗口名称集合。
+            </summary>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindowGroup.GetDebuggerWindow(System.String)">
+            <summary>
+            获取调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <returns>要获取的调试窗口。</returns>
+        </member>
+        <member name="M:Framework.Debugger.IDebuggerWindowGroup.RegisterDebuggerWindow(System.String,Framework.Debugger.IDebuggerWindow)">
+            <summary>
+            注册调试窗口。
+            </summary>
+            <param name="path">调试窗口路径。</param>
+            <param name="debuggerWindow">要注册的调试窗口。</param>
+        </member>
+        <member name="M:TransformExtensions.SetX(UnityEngine.Transform,System.Single)">
+            <summary>
+            	Sets the X position of this transform.
+            </summary>
+        </member>
+        <member name="M:TransformExtensions.SetY(UnityEngine.Transform,System.Single)">
+            <summary>
+              Sets the Y position of this transform.
+            </summary>
+        </member>
+        <member name="M:TransformExtensions.SetZ(UnityEngine.Transform,System.Single)">
+                    Sets the Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetXY(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the X and Y position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetXZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the X and Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetYZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the Y and Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetXYZ(UnityEngine.Transform,System.Single,System.Single,System.Single)">
+                    Sets the X, Y and Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.TranslateX(UnityEngine.Transform,System.Single)">
+                    Translates this transform along the X axis.
+        </member>
+        <member name="M:TransformExtensions.TranslateY(UnityEngine.Transform,System.Single)">
+                    Translates this transform along the Y axis.
+        </member>
+        <member name="M:TransformExtensions.TranslateZ(UnityEngine.Transform,System.Single)">
+                    Translates this transform along the Z axis.
+        </member>
+        <member name="M:TransformExtensions.TranslateXY(UnityEngine.Transform,System.Single,System.Single)">
+                    Translates this transform along the X and Y axes.
+        </member>
+        <member name="M:TransformExtensions.TranslateXZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Translates this transform along the X and Z axes.
+        </member>
+        <member name="M:TransformExtensions.TranslateYZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Translates this transform along the Y and Z axes.
+        </member>
+        <member name="M:TransformExtensions.TranslateXYZ(UnityEngine.Transform,System.Single,System.Single,System.Single)">
+                    Translates this transform along the X, Y and Z axis.
+        </member>
+        <member name="M:TransformExtensions.SetLocalX(UnityEngine.Transform,System.Single)">
+                    Sets the local X position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetLocalY(UnityEngine.Transform,System.Single)">
+                    Sets the local Y position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetLocalZ(UnityEngine.Transform,System.Single)">
+                    Sets the local Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetLocalXY(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the local X and Y position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetLocalXZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the local X and Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetLocalYZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the local Y and Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetLocalXYZ(UnityEngine.Transform,System.Single,System.Single,System.Single)">
+                    Sets the local X, Y and Z position of this transform.
+        </member>
+        <member name="M:TransformExtensions.ResetPosition(UnityEngine.Transform)">
+                    Sets the position to 0, 0, 0.
+        </member>
+        <member name="M:TransformExtensions.ResetLocalPosition(UnityEngine.Transform)">
+                    Sets the local position to 0, 0, 0.
+        </member>
+        <member name="M:TransformExtensions.SetScaleX(UnityEngine.Transform,System.Single)">
+            			Sets the local X scale of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetScaleY(UnityEngine.Transform,System.Single)">
+                    Sets the local Y scale of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetScaleZ(UnityEngine.Transform,System.Single)">
+                    Sets the local Z scale of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetScaleXY(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the local X and Y scale of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetScaleXZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the local X and Z scale of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetScaleYZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Sets the local Y and Z scale of this transform.
+        </member>
+        <member name="M:TransformExtensions.SetScaleXYZ(UnityEngine.Transform,System.Single,System.Single,System.Single)">
+                    Sets the local X, Y and Z scale of this transform.
+        </member>
+        <member name="M:TransformExtensions.ScaleByX(UnityEngine.Transform,System.Single)">
+                    Scale this transform in the X direction.
+        </member>
+        <member name="M:TransformExtensions.ScaleByY(UnityEngine.Transform,System.Single)">
+                    Scale this transform in the Y direction.
+        </member>
+        <member name="M:TransformExtensions.ScaleByZ(UnityEngine.Transform,System.Single)">
+                    Scale this transform in the Z direction.
+        </member>
+        <member name="M:TransformExtensions.ScaleByXY(UnityEngine.Transform,System.Single,System.Single)">
+                    Scale this transform in the X, Y direction.
+        </member>
+        <member name="M:TransformExtensions.ScaleByXZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Scale this transform in the X, Z directions.
+        </member>
+        <member name="M:TransformExtensions.ScaleByYZ(UnityEngine.Transform,System.Single,System.Single)">
+                    Scale this transform in the Y and Z directions.
+        </member>
+        <member name="M:TransformExtensions.ScaleByXY(UnityEngine.Transform,System.Single)">
+                    Scale this transform in the X and Y directions.
+        </member>
+        <member name="M:TransformExtensions.ScaleByXZ(UnityEngine.Transform,System.Single)">
+                    Scale this transform in the X and Z directions.
+        </member>
+        <member name="M:TransformExtensions.ScaleByYZ(UnityEngine.Transform,System.Single)">
+                    Scale this transform in the Y and Z directions.
+        </member>
+        <member name="M:TransformExtensions.ScaleByXYZ(UnityEngine.Transform,System.Single,System.Single,System.Single)">
+                    Scale this transform in the X, Y and Z directions.
+        </member>
+        <member name="M:TransformExtensions.ScaleByXYZ(UnityEngine.Transform,System.Single)">
+                    Scale this transform in the X, Y and Z directions.
+        </member>
+        <member name="M:TransformExtensions.ResetScale(UnityEngine.Transform)">
+                    Resets the local scale of this transform in to 1 1 1.
+        </member>
+        <member name="M:TransformExtensions.FlipX(UnityEngine.Transform)">
+            			Negates the X scale.
+        </member>
+        <member name="M:TransformExtensions.FlipY(UnityEngine.Transform)">
+                    Negates the Y scale.
+        </member>
+        <member name="M:TransformExtensions.FlipZ(UnityEngine.Transform)">
+                    Negates the Z scale.
+        </member>
+        <member name="M:TransformExtensions.FlipXY(UnityEngine.Transform)">
+                    Negates the X and Y scale.
+        </member>
+        <member name="M:TransformExtensions.FlipXZ(UnityEngine.Transform)">
+                    Negates the X and Z scale.
+        </member>
+        <member name="M:TransformExtensions.FlipYZ(UnityEngine.Transform)">
+                    Negates the Y and Z scale.
+        </member>
+        <member name="M:TransformExtensions.FlipXYZ(UnityEngine.Transform)">
+                    Negates the X, Y and Z scale.
+        </member>
+        <member name="M:TransformExtensions.FlipPostive(UnityEngine.Transform)">
+                    Sets all scale values to the absolute values.
+        </member>
+        <member name="M:TransformExtensions.RotateAroundX(UnityEngine.Transform,System.Single)">
+            			Rotates the transform around the X axis.
+        </member>
+        <member name="M:TransformExtensions.RotateAroundY(UnityEngine.Transform,System.Single)">
+                    Rotates the transform around the Y axis.
+        </member>
+        <member name="M:TransformExtensions.RotateAroundZ(UnityEngine.Transform,System.Single)">
+                    Rotates the transform around the Z axis.
+        </member>
+        <member name="M:TransformExtensions.SetRotationX(UnityEngine.Transform,System.Single)">
+                    Sets the X rotation.
+        </member>
+        <member name="M:TransformExtensions.SetRotationY(UnityEngine.Transform,System.Single)">
+                    Sets the Y rotation.
+        </member>
+        <member name="M:TransformExtensions.SetRotationZ(UnityEngine.Transform,System.Single)">
+                    Sets the Z rotation.
+        </member>
+        <member name="M:TransformExtensions.SetLocalRotationX(UnityEngine.Transform,System.Single)">
+                    Sets the local X rotation.
+        </member>
+        <member name="M:TransformExtensions.SetLocalRotationY(UnityEngine.Transform,System.Single)">
+                    Sets the local Y rotation.
+        </member>
+        <member name="M:TransformExtensions.SetLocalRotationZ(UnityEngine.Transform,System.Single)">
+                    Sets the local Z rotation.
+        </member>
+        <member name="M:TransformExtensions.ResetRotation(UnityEngine.Transform)">
+                    Resets the rotation to 0, 0, 0.
+        </member>
+        <member name="M:TransformExtensions.ResetLocalRotation(UnityEngine.Transform)">
+                    Resets the local rotation to 0, 0, 0.
+        </member>
+        <member name="M:TransformExtensions.ResetLocal(UnityEngine.Transform)">
+            			Resets the ;local position, local rotation, and local scale.
+        </member>
+        <member name="M:TransformExtensions.Reset(UnityEngine.Transform)">
+                    Resets the position, rotation, and local scale.
+        </member>
+        <member name="M:TransformExtensions.SelfAndAllChildren(UnityEngine.Transform)">
+                    A lazy enumerable of this objects transform, and all it's children down the hierarchy.
+            			
+                    @version_e_1_1
+        </member>
+        <member name="M:VectorExtensions.Perp(UnityEngine.Vector2)">
+                    Returns the vector rotated 90 degrees counter-clockwise. This vector is
+                    always perpendicular to the given vector.
+            
+                    The perp dot product can be caluclted using this:
+                        var perpDotPorpduct = Vector2.Dot(v1.Perp(), v2);
+        </member>
+        <member name="M:VectorExtensions.Proj(UnityEngine.Vector2,UnityEngine.Vector2)">
+                    Returns the projection of this vector onto the given base.
+        </member>
+        <member name="M:VectorExtensions.Rej(UnityEngine.Vector2,UnityEngine.Vector2)">
+                    Returns the rejection of this vector onto the given base.
+            
+                    The sum of a vector's projection and rejection on a base is
+                    equal to the original vector.
+        </member>
+        <member name="M:VectorExtensions.Proj(UnityEngine.Vector3,UnityEngine.Vector3)">
+                    Returns the projection of this vector onto the given base.
+        </member>
+        <member name="M:VectorExtensions.Rej(UnityEngine.Vector3,UnityEngine.Vector3)">
+                    Returns the rejection of this vector onto the given base.
+            
+                    The sum of a vector's projection and rejection on a base is
+                    equal to the original vector.
+        </member>
+        <member name="M:VectorExtensions.Proj(UnityEngine.Vector4,UnityEngine.Vector4)">
+                    Returns the projection of this vector onto the given base.
+        </member>
+        <member name="M:VectorExtensions.Rej(UnityEngine.Vector4,UnityEngine.Vector4)">
+                    Returns the rejection of this vector onto the given base.
+            
+                    The sum of a vector's projection and rejection on a base is
+                    equal to the original vector.
+        </member>
+        <member name="T:Debuger">
+            <summary>
+            扩展Debug类
+            </summary>
+        </member>
+        <member name="F:Debuger.EnableLog">
+            <summary>
+            是否开启Log
+            </summary>
+        </member>
+        <member name="M:Debuger.Log(System.String)">
+            <summary>
+            输出日志
+            </summary>
+            <param name="log"></param>
+        </member>
+        <member name="M:Debuger.LogError(System.String)">
+            <summary>
+            输出错误日志
+            </summary>
+            <param name="logError"></param>
+        </member>
+        <member name="M:Debuger.LogWarning(System.String)">
+            <summary>
+            输出警告日志
+            </summary>
+            <param name="logWarning"></param>
+        </member>
+        <member name="M:Debuger.LogFormat(System.String,System.Object[])">
+            <summary>
+            格式化日志输出
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Debuger.LogErrorFormat(System.String,System.Object[])">
+            <summary>
+            格式化错误日志输出
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+        <member name="M:Debuger.LogWarningFormat(System.String,System.Object[])">
+            <summary>
+            格式化警告日志输出
+            </summary>
+            <param name="format"></param>
+            <param name="args"></param>
+        </member>
+    </members>
+</doc>

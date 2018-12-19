@@ -35,9 +35,24 @@ public class VideoController : MonoBehaviour
 
     void Start()
     {
-        
+        Invoke("Load", 2f);
+    }
+
+    private void Load()
+    {
+        string tempPath = null;
+        if (Application.platform == RuntimePlatform.Android)
+        {
+            tempPath = Application.dataPath + "!assets";
+        }
+        else
+        {
+            tempPath = Application.streamingAssetsPath;
+        }
         var tempEnumra = Directory.GetFiles(Application.streamingAssetsPath, "*.*", SearchOption.AllDirectories).Where(s => s.EndsWith(".mp4") || s.EndsWith(".mov") || s.EndsWith(".avi"));
+        Debuger.Log(tempEnumra.ToString());
         videoPaths = tempEnumra.ToArray();
+        Debuger.Log(videoPaths.ToString());
 
         /*
         videoPaths = new string[3];
@@ -94,7 +109,11 @@ public class VideoController : MonoBehaviour
 
     void Update()
     {
-
+        if (videoPlayer == null)
+        {
+            //Debuger.LogError("未获取到视频组件");
+            return;
+        }
         //没有视频则返回，不播放
 
         if (videoPlayer.texture == null)
